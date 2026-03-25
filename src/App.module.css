@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  transition: filter 0.3s;
+}
+
+.app main {
+  flex: 1;
+}
+
+/* Scroll progress indicator */
+.scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-accent);
+  transform-origin: left;
+  z-index: 101;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Konami code retro mode */
+.retro {
+  filter: contrast(1.15) saturate(1.4);
+  image-rendering: pixelated;
+}
+
+.retroBanner {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  animation: bannerSlide 3s var(--ease-out-expo) forwards;
+}
+
+.retroBanner span {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-toast-text);
+  background: var(--color-accent);
+  padding: 8px 24px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+@keyframes bannerSlide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
