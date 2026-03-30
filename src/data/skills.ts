@@ -1,6 +1,6 @@
 export interface Skill {
 	name: string;
-	category: "frontend" | "backend" | "tools";
+	category: "frontend" | "backend" | "tools" | "other";
 	level: number;
 }
 
@@ -20,10 +20,13 @@ export const skills: Skill[] = [
 	{ name: "Vite / Webpack", category: "tools", level: 82 },
 	{ name: "Figma", category: "tools", level: 74 },
 	{ name: "CI / CD", category: "tools", level: 78 },
+	{ name: "French", category: "other", level: 80 },
+	{ name: "Japanese", category: "other", level: 20 },
 ];
 
 export const categoryLabels: Record<Skill["category"], string> = {
 	frontend: "Frontend",
 	backend: "Backend",
 	tools: "Tools & Workflow",
+	other: "Other",
 };

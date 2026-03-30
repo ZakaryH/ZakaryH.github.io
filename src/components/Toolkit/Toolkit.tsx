@@ -3,7 +3,7 @@ import { useScrollReveal } from "../../hooks/useScrollReveal.ts";
 import styles from "./Toolkit.module.css";
 import { ToolkitCard } from "./ToolkitCard.tsx";
 
-const categories = ["frontend", "backend", "tools"] as const;
+const categories = ["frontend", "backend", "tools", "other"] as const;
 
 export function Toolkit() {
 	const { ref, isVisible } = useScrollReveal<HTMLElement>(0.08);
